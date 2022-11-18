@@ -8,17 +8,20 @@ module.exports = {
   webpack: {
     alias: {
       "@": resolve("src"),
-      "base-ui": resolve("src/base-ui"),
-      "components": resolve("src/components"),
-      "hooks": resolve("src/hooks"),
-      "views": resolve("src/views"),
-      "utils": resolve("src/utils"),
     }
   },
   // less
   plugins: [
     {
       plugin: CracoLessPlugin,
+      options: {
+        lessLoaderOptions: {
+          lessOptions: {
+            modifyVars: { '@primary-color': '#1DA57A' },
+            javascriptEnabled: true,
+          },
+        },
+      },
     },
   ],
 }
