@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
+import { HeaderWrapper } from './style'
 import HeaderCenter from './c-cpns/header-center'
 import HeaderLeft from './c-cpns/header-left'
 import HeaderRight from './c-cpns/header-right'
-import { HeaderWrapper } from './style'
 
 const AppHeader = memo(() => {
   return (

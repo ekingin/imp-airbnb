@@ -27,3 +27,17 @@ export function getHomeHotRecommendData() {
     url: "/home/hotrecommenddest"
   })
 }
+
+// 获取数据：向往城市
+export function getHomeLongforData() {
+  return ekRequest.get({
+    url: "/home/longfor"
+  })
+}
+
+// 获取数据：plus数据
+export function getHomePlusData() {
+  return ekRequest.get({
+    url: "/home/plus"
+  })
+}

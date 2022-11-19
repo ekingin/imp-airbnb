@@ -5,7 +5,7 @@ import entireSlice from './modules/entire'
 const store = configureStore({
   reducer: {
     home: homeSlice,
-    entire: entireSlice
+    entire: entireSlice,
   }
 })
 

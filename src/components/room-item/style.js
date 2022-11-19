@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ItemWrapper = styled.div`
   width: ${ props => props.itemWidth };
   padding: 0 8px 12px;
+  flex-shrink: 0;
 
   .inner {
     width: 100%;
@@ -11,12 +12,15 @@ export const ItemWrapper = styled.div`
       position: relative;
       padding-top: 66.66%;
       margin-bottom: 10px;
+      border-radius: 3px;
       img {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
+        border-radius: 3px;
+        object-fit: cover;
       }
     }
     .desc {
