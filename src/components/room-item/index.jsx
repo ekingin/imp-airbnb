@@ -26,7 +26,7 @@ const RoomItem = memo((props) => {
   }
 
   const roomClickHandle = () => {
-    itemClick(roomItem)
+    itemClick && itemClick(roomItem)
   }
 
   const SinglePicture = (

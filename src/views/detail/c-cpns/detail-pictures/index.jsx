@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo, useCallback, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { PictruesWrapper } from './style'
 import PictruesBrowser from '@/base-ui/pictrues-browser'
@@ -8,14 +8,11 @@ const DetailPictures = memo(() => {
   const { roomDetail } = useSelector((state) => ({
     roomDetail: state.detail.roomDetail
   }))
-  const [ showPicBrowser, setShowPicBrowser ] = useState(true)
+  const [ showPicBrowser, setShowPicBrowser ] = useState(false)
 
-  useEffect(() => {
-  })
-
-  const isShowPicBrowser = (isShow = true) => {
+  const isShowPicBrowser = useCallback((isShow = true) => {
     setShowPicBrowser(isShow)
-  }
+  }, [])
 
   return (
     <PictruesWrapper>

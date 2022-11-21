@@ -14,13 +14,13 @@ import { ThemeProvider } from 'styled-components'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Suspense failback={"loading"}>
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <HashRouter>
-          <App />
-        </HashRouter>
-      </ThemeProvider>
-    </Provider>
-  </Suspense>
+  <Provider store={store}>
+    <Suspense failback={"loading"}>
+        <ThemeProvider theme={theme}>
+          <HashRouter>
+            <App />
+          </HashRouter>
+        </ThemeProvider>
+    </Suspense>
+  </Provider>
 );

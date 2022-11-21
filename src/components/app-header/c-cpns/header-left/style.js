@@ -8,5 +8,6 @@ export const LeftWrapper = styled.div`
     width: 102px;
     height: 80px;
     color: ${ props => props.theme.color.primary };
+    cursor: pointer;
   }
 `

@@ -13,10 +13,10 @@ export const RightWrapper = styled.div`
     align-items: center;
     margin-right: 8px;
     .btn {
-      display: inline-block;
       padding: 12px;
       font-weight: 600;
       color: #222;
+      cursor: pointer;
     }
   }
 

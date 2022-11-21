@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo, useCallback, useEffect } from 'react'
 import { useDispatch, useSelector, shallowEqual } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { RoomsWrapper } from './style'
@@ -21,11 +21,11 @@ const EntireRooms = memo((props) => {
   }, [dispatch])
 
   const navigate = useNavigate()
-  const navigateToDetial = (roomItem) => {
+  const navigateToDetial = useCallback((roomItem) => {
     // 把当前房屋详情对象保存到store中国
     dispatch(changeRoomDetailAction(roomItem))
     navigate("/detail")
-  }
+  }, [dispatch, navigate])
 
   return (
     <RoomsWrapper>

@@ -24,15 +24,15 @@ const HeaderRight = memo(() => {
   return (
     <RightWrapper>
       <div className='btns'>
-        <a href='/' className='btn'>
-          <div>登录</div>
-        </a>
-        <a href='/'className='btn'>
-          <div>注册</div>
-        </a>
-        <a href='/'className='btn'>
+        <div className='btn'>
+          <span>登录</span>
+        </div>
+        <div className='btn'>
+          <span>注册</span>
+        </div>
+        <div className='btn'>
           <IconLanguage />
-        </a>
+        </div>
       </div>
       <div className='profile' onClick={showMenuPanel}>
         <div className='icon-select-menu'>
