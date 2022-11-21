@@ -9,19 +9,24 @@ import IconRightArrow from '@/assets/svg/icon-right-arrow'
 import Indicator from '@/base-ui/indicator'
 
 const RoomItem = memo((props) => {
-  const { roomItem, itemWidth = "25%"} = props
+  const { roomItem, itemWidth = "25%", itemClick} = props
   const carouselRef = useRef()
 
   const [ currentIndex, setCurrentIndex ] = useState(0)
-  const controlerClickHandle = (isRight) => {
+  const controlerClickHandle = (event, isRight) => {
+    event.stopPropagation()
     // 切换图片
     isRight ? carouselRef.current.next() : carouselRef.current.prev()
     // 计算 currentIndex
-    const len = roomItem.picture_urls.length
+    const len = roomItem.picture_urls?.length
     let newIndex = isRight ? currentIndex + 1 : currentIndex - 1
     if (newIndex >= len) newIndex = 0
     if (newIndex < 0) newIndex = len -1
     setCurrentIndex(newIndex)
+  }
+
+  const roomClickHandle = () => {
+    itemClick(roomItem)
   }
 
   const SinglePicture = (
@@ -35,7 +40,7 @@ const RoomItem = memo((props) => {
       <div className='indicator'>
         <Indicator currentIndex={ currentIndex }>
           {
-            roomItem?.picture_urls.map((item, index) => (
+            roomItem?.picture_urls?.map((item, index) => (
               <div className='dot-wrap' key={ item }>
                 <div className={ classNames("dot", 
                   { 
@@ -53,10 +58,10 @@ const RoomItem = memo((props) => {
       </div>
       {/* 自定义控制器 */}
       <div className='controler'>
-        <div className='item left' onClick={ e => controlerClickHandle(false) }>
+        <div className='item left' onClick={ e => controlerClickHandle(e, false) }>
           <IconLeftArrow width={ 24 } height={ 24 } />
         </div>
-        <div className='item right' onClick={ e => controlerClickHandle(true) }>
+        <div className='item right' onClick={ e => controlerClickHandle(e, true) }>
           <IconRightArrow width={ 24 } height={ 24 } />
         </div>
       </div>
@@ -77,6 +82,7 @@ const RoomItem = memo((props) => {
     <ItemWrapper 
       verifyTextColor={ roomItem?.verify_info?.text_color ?? "#39576A" }
       itemWidth={ itemWidth }
+      onClick={ roomClickHandle }
     >
       <div className='inner'>
         { roomItem.picture_urls ? CarouselPictrue : SinglePicture }

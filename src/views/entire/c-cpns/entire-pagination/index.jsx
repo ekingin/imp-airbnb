@@ -5,8 +5,6 @@ import { PaginationWrapper } from './style'
 import { fetchEntireRoomList } from '@/store/modules/entire/actionCreators'
 
 const EntirePagination = memo((props) => {
-  console.log("paginiation render");
-
   const { currentPage, totalCount, roomList } = useSelector((state) => ({
     currentPage: state.entire.currentPage,
     totalCount: state.entire.totalCount,

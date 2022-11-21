@@ -1,12 +1,12 @@
 import React, { memo, useEffect } from 'react'
 import { useDispatch, useSelector, shallowEqual } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { RoomsWrapper } from './style'
 import RoomItem from '@/components/room-item'
 import { fetchEntireRoomList } from '@/store/modules/entire/actionCreators'
+import { changeRoomDetailAction } from '@/store/modules/detail'
 
 const EntireRooms = memo((props) => {
-  console.log("rooms render");
-
   // 获取store中的数据
   const { roomList, totalCount, isLoading } = useSelector((state) => ({
     roomList: state.entire.roomList,
@@ -20,6 +20,13 @@ const EntireRooms = memo((props) => {
     dispatch(fetchEntireRoomList())
   }, [dispatch])
 
+  const navigate = useNavigate()
+  const navigateToDetial = (roomItem) => {
+    // 把当前房屋详情对象保存到store中国
+    dispatch(changeRoomDetailAction(roomItem))
+    navigate("/detail")
+  }
+
   return (
     <RoomsWrapper>
       <h2 className='title'>{ totalCount }多处住宿</h2>
@@ -30,6 +37,7 @@ const EntireRooms = memo((props) => {
               roomItem={ room } 
               itemWidth="20%" 
               key={ room._id }
+              itemClick={ navigateToDetial }
             />
           ))
         }

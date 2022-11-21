@@ -39,6 +39,7 @@ export const RightWrapper = styled.div`
 
     .select-menu-panel {
       position: fixed;
+      z-index: 9;
       top: 72px;
       right: 24px;
       box-shadow: 0 0 6px rgba(0,0,0,.2);

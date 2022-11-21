@@ -11,7 +11,6 @@ const ScrollViewH = memo((props) => {
   const posIndexRef = useRef(0)
   const scrollContentRef = useRef()
   const hiddenDistance = useRef()
-  console.log(leftCtlOffset, rightCtlOffset);
   
   // 是否显示右滚动按钮
   useEffect(() => {
