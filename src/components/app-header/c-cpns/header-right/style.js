@@ -31,6 +31,10 @@ export const RightWrapper = styled.div`
     padding: 0 6px 0 10px;
     ${ props => props.theme.mixin.boxShadow }
 
+    .icon-avatar {
+      color: #717171;
+    }
+
     .select-menu-panel {
       position: fixed;
       z-index: 9;

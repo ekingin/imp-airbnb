@@ -5,7 +5,7 @@ import { HeaderWrapper } from './style'
 import HeaderCenter from './c-cpns/header-center'
 import HeaderLeft from './c-cpns/header-left'
 import HeaderRight from './c-cpns/header-right'
-import useScrollPosition from '@/hooks/useScrollPosition'
+import useScrollPosition from '@/hooks/use-scroll-position'
 import { ThemeProvider } from 'styled-components'
 
 const AppHeader = memo(() => {
