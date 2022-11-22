@@ -4,16 +4,17 @@ const mainSlice = createSlice({
   name: 'main',
   initialState: {
     appHeaderConfig: {
-      isFixed: false
+      isFixed: false, // 是否固定定位
+      isAlpha: false, // 是否透明
     }
   },
   reducers: {
-    changeIsFixedAction(state, { payload }) {
+    changeAppHeaderConfigAction(state, { payload }) {
       state.appHeaderConfig = payload
     }
   }
 })
 
-export const { changeIsFixedAction } = mainSlice.actions
+export const { changeAppHeaderConfigAction } = mainSlice.actions
 
 export default mainSlice.reducer

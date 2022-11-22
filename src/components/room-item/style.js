@@ -14,7 +14,7 @@ export const ItemWrapper = styled.div`
 
       .indicator {
         position: absolute;
-        z-index: 99;
+        z-index: 1;
         bottom: 10px;
         left: 0;
         right: 0;
@@ -47,11 +47,11 @@ export const ItemWrapper = styled.div`
 
       .controler {
         position: absolute;
+        z-index: 1;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 9;
         display: flex;
         justify-content: space-between;
 

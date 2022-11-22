@@ -4,13 +4,13 @@ import { EntireWrapper } from './style'
 import EntireFilter from './c-cpns/entire-filter'
 import EntireRooms from './c-cpns/entire-rooms'
 import EntirePagination from './c-cpns/entire-pagination'
-import { changeIsFixedAction } from '@/store/modules/main'
+import { changeAppHeaderConfigAction } from '@/store/modules/main'
 
 const Entire = memo(() => {
 
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(changeIsFixedAction({ isFixed: true }))
+    dispatch(changeAppHeaderConfigAction({ isFixed: true, isAlpha: false }))
   }, [dispatch])
 
   return (

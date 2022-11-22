@@ -6,8 +6,8 @@ export const LeftWrapper = styled.div`
     display: flex;
     align-items: center;
     width: 102px;
-    height: 80px;
-    color: ${ props => props.theme.color.primary };
+    height: 100%;
+    color: ${ props => props.theme.headerAlpha ? "#fff" :props.theme.color.primary };
     cursor: pointer;
   }
 `
