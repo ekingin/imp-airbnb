@@ -12,27 +12,11 @@
   - 房源列表封装，可任意列展示，配合自定义的滚动视图组件可做到水平滚动展示
   - 首页头部组件添加动画效果
 
-![image-20221122130213420](C:/Users/13215/AppData/Roaming/Typora/typora-user-images/image-20221122130213420.png)
-
-![image-20221122130313104](C:/Users/13215/AppData/Roaming/Typora/typora-user-images/image-20221122130313104.png)
-
-![image-20221122130536735](C:/Users/13215/AppData/Roaming/Typora/typora-user-images/image-20221122130536735.png)
-
 - 更多房源页面
   - 单个房源商品拥有多张图片，使用轮播图展示，自定义轮播图指示器
 
-![image-20221122130855551](C:/Users/13215/AppData/Roaming/Typora/typora-user-images/image-20221122130855551.png)
-
-
-
-
-
 - 详情页
   - 自定义图片浏览器，配合自定义的指示器组件展示图片列表
-
-![image-20221122130944611](C:/Users/13215/AppData/Roaming/Typora/typora-user-images/image-20221122130944611.png)
-
-![image-20221122131104549](C:/Users/13215/AppData/Roaming/Typora/typora-user-images/image-20221122131104549.png)
 
 ## 1.2 项目规范
 
@@ -52,7 +36,7 @@
    1. 组件内部state管理；
    2. redux的hooks代码；
    3. 其他组件hooks代码；
-   4. 3.其他逻辑代码；
+   4. 其他逻辑代码；
    5. 返回JSX代码；
 
 8. redux代码规范如下：
