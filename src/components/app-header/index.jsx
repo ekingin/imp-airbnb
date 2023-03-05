@@ -16,7 +16,6 @@ const AppHeader = memo(() => {
   const { appHeaderConfig: { isFixed, isAlpha } } = useSelector((state) => ({
     appHeaderConfig: state.main.appHeaderConfig
   }), shallowEqual)
-  console.log(isFixed);
   
   /**
    * 监听滚动
