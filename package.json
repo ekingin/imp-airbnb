@@ -2,6 +2,12 @@
   "name": "imp-airbnb",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.10.5",
@@ -24,11 +30,9 @@
     "underscore": "^1.13.6",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@craco/craco": "^7.0.0-alpha.9",
+    "craco-less": "^2.1.0-alpha.0"
   },
   "eslintConfig": {
     "extends": [
@@ -48,8 +52,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@craco/craco": "^7.0.0-alpha.9",
-    "craco-less": "^2.1.0-alpha.0"
-  }
+  "homepage": "."
 }
