@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { 
-  getHomeGoodPriceData, 
-  getHomeHighScoreData, 
+import {
+  getHomeGoodPriceData,
+  getHomeHighScoreData,
   getHomeDiscountData,
   getHomeHotRecommendData,
   getHomeLongforData,
@@ -10,14 +10,14 @@ import {
 
 // 使用 redux RTK 的方式创建 reducer
 const homeSlice = createSlice({
-  name: "home",
+  name: 'home',
   initialState: {
     goodPriceInfo: {},
     highScoreInfo: {},
     discountInfo: {},
     hotRecommendInfo: {},
     longforInfo: {},
-    plusInfo: {}
+    plusInfo: {},
   },
   reducers: {
     changeGoodPriceInfoAction(state, { payload }) {
@@ -37,12 +37,12 @@ const homeSlice = createSlice({
     },
     changePlusInfoAction(state, { payload }) {
       state.plusInfo = payload
-    }
+    },
   },
 })
 
 // 异步操作，发送网络请求，拿到数据存入store
-export const fetchHomeDataAction = createAsyncThunk("fetchHomeData", (payload, { dispatch }) => {
+export const fetchHomeDataAction = createAsyncThunk('fetchHomeData', (payload, { dispatch }) => {
   getHomeGoodPriceData().then(res => {
     dispatch(changeGoodPriceInfoAction(res))
   })
@@ -63,8 +63,8 @@ export const fetchHomeDataAction = createAsyncThunk("fetchHomeData", (payload, {
   })
 })
 
-export const { 
-  changeGoodPriceInfoAction, 
+export const {
+  changeGoodPriceInfoAction,
   changeHighScoreInfoAction,
   changeDiscountInfoAction,
   changeHotRecommendAction,

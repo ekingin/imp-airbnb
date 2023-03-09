@@ -3,7 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { RoomsWrapper } from './style'
 import RoomItem from '@/components/room-item'
-import { fetchEntireRoomList } from '@/store/modules/entire/actionCreators'
+import { fetchEntireRoomList } from '@/store/modules/entire'
 import { changeRoomDetailAction } from '@/store/modules/detail'
 
 const EntireRooms = memo((props) => {

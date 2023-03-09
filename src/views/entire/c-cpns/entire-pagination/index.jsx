@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { useSelector, useDispatch, shallowEqual } from 'react-redux'
 import Pagination from '@mui/material/Pagination'
 import { PaginationWrapper } from './style'
-import { fetchEntireRoomList } from '@/store/modules/entire/actionCreators'
+import { fetchEntireRoomList } from '@/store/modules/entire'
 
 const EntirePagination = memo((props) => {
   const { currentPage, totalCount, roomList } = useSelector((state) => ({
